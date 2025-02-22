@@ -1,0 +1,61 @@
+/* Center the board */
+.GameBoard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+/* Styling for each row */
+.GameBoard > li {
+    display: flex;
+}
+
+/* Remove default list styling */
+.GameBoard ol {
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+/* Styling for each cell */
+.GameBoard li {
+    margin: 5px;
+}
+
+/* Styling for the buttons (game cells) */
+.GameBoard button {
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+
+/* Hover effect */
+.GameBoard button:hover {
+    background-color: #ddd;
+}
+
+/* Clicked buttons should not change color */
+.GameBoard button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Style for X and O */
+.GameBoard button[data-value="X"] {
+    color: red;
+}
+
+.GameBoard button[data-value="O"] {
+    color: blue;
+}
