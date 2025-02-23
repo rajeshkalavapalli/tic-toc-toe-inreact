@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Player(props) {
+function Player(props, isActive) {
 
     const [isEditing, setIsEditing] = useState(false);
 
@@ -22,7 +22,7 @@ function Player(props) {
 
     return (
         <>
-        <li>
+        <li className={isActive ?"active" : undefined}>
             {PlayerName}
             <span>{props.Name}</span>
             <button onClick={handleEditClick}>{ isEditing ? "save" : "edit" }</button>
